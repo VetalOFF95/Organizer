@@ -119,7 +119,7 @@ class ItemListViewController: SwipeTableViewController {
     
     func loadItems(){
         
-        todoItems = selectedCategory?.items.sorted(byKeyPath: "title", ascending: true)
+        todoItems = selectedCategory?.items.sorted(byKeyPath: "dateCreated", ascending: false)
         
         tableView.reloadData()
     }

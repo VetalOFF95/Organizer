@@ -15,7 +15,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nIH-bf-Seg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="q07-wO-LWe" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -32,6 +32,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Organizer" id="viA-Br-O9n">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="rv7-xZ-F5O"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fb4-9Z-8uX">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -78,7 +79,8 @@
                             <outlet property="delegate" destination="Jap-BE-Hlx" id="6z6-fe-4W1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="gfe-Qw-M7l">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="gfe-Qw-M7l">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Tsb-G0-bQP"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="P5N-ZH-zeO">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -100,9 +102,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xtW-Cx-tZF" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vqa-QT-oi4">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="vqa-QT-oi4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" systemColor="systemTealColor"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

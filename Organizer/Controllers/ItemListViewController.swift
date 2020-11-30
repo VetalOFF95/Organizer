@@ -82,6 +82,7 @@ class ItemListViewController: SwipeTableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    //MARK: - Add new Item
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
@@ -91,20 +92,21 @@ class ItemListViewController: SwipeTableViewController {
         
         let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
             
-            if let currentCategory = self.selectedCategory {
-                do {
-                    try self.realm.write {
-                        let newItem = Item()
-                        newItem.title = textField.text!
-                        newItem.dateCreated = Date()
-                        currentCategory.items.append(newItem)
+            if !textField.text!.trimmingCharacters(in: .whitespaces).isEmpty {
+                if let currentCategory = self.selectedCategory {
+                    do {
+                        try self.realm.write {
+                            let newItem = Item()
+                            newItem.title = textField.text!
+                            newItem.dateCreated = Date()
+                            currentCategory.items.append(newItem)
+                        }
+                    } catch {
+                        print("Error saving Item \(error)")
                     }
-                } catch {
-                    print("Error saving Item \(error)")
                 }
+                self.tableView.reloadData()
             }
-            
-            self.tableView.reloadData()
         }
         
         alert.addTextField { (alertTextField) in

@@ -35,7 +35,7 @@ class ItemListViewController: SwipeTableViewController {
             title = selectedCategory!.name
             
             if let navBarColour = UIColor(hexString: colourHex) {
-                navBar.backgroundColor = navBarColour
+                navBar.barTintColor = navBarColour
                 navBar.tintColor = ContrastColorOf(navBarColour, returnFlat: true)
                 navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : ContrastColorOf(navBarColour, returnFlat: true)]
                 searchBar.barTintColor = navBarColour

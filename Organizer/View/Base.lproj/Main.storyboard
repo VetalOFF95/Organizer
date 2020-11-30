@@ -80,6 +80,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="gfe-Qw-M7l">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="P5N-ZH-zeO">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="Jap-BE-Hlx" id="KRK-gC-Lzu"/>
                             </connections>

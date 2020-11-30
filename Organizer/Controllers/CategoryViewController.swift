@@ -24,7 +24,7 @@ class CategoryViewController: SwipeTableViewController {
     override func viewWillAppear(_ animated: Bool) {
         guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist.")}
         
-        navBar.backgroundColor = UIColor(hexString: "1D9BF6")
+        navBar.barTintColor = UIColor(hexString: "5CC7FA")
     }
     
     //MARK: - TableView Datasource Methods
@@ -110,7 +110,7 @@ class CategoryViewController: SwipeTableViewController {
     }
     
     func loadCategories(){
-        
+
         categories = realm.objects(Category.self)
         
         tableView.reloadData()

@@ -173,7 +173,9 @@
                             <constraint firstItem="Wf4-wX-cp3" firstAttribute="trailing" secondItem="Jfh-Pv-xoG" secondAttribute="trailing" id="qwR-mk-4CG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1pJ-f7-Ma0"/>
+                    <navigationItem key="navigationItem" title="Weather" id="1pJ-f7-Ma0">
+                        <barButtonItem key="backBarButtonItem" title="to Weather" id="7FM-u3-uQw"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="cityLabel" destination="z64-a1-YEL" id="Mm5-Vg-LIg"/>
                         <outlet property="conditionImageView" destination="SF4-Ca-UNd" id="los-pV-kby"/>

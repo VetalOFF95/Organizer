@@ -10,6 +10,55 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Organizier-->
+        <scene sceneID="LRn-Mc-Xdx">
+            <objects>
+                <viewController id="5vm-n6-t3J" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6bd-pf-7hI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="26U-yk-hza">
+                                <rect key="frame" x="20" y="160" width="374" height="682"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSB-xu-8Jo">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="316"/>
+                                        <color key="backgroundColor" red="0.40252506729999998" green="0.84478694200000004" blue="0.99610942599999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <state key="normal" title="Weather"/>
+                                        <connections>
+                                            <segue destination="df7-T5-B2J" kind="show" id="Pcc-zQ-zUp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mp8-f5-wXt">
+                                        <rect key="frame" x="0.0" y="366" width="374" height="316"/>
+                                        <color key="backgroundColor" red="1" green="0.75686274509999996" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <state key="normal" title="Notes"/>
+                                        <connections>
+                                            <segue destination="31R-g7-epQ" kind="show" id="NBO-cg-Pga"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yor-eZ-gyy"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="Yor-eZ-gyy" firstAttribute="trailing" secondItem="26U-yk-hza" secondAttribute="trailing" constant="20" id="025-ds-sTP"/>
+                            <constraint firstItem="26U-yk-hza" firstAttribute="leading" secondItem="Yor-eZ-gyy" secondAttribute="leading" constant="20" id="N2Y-kc-WDS"/>
+                            <constraint firstItem="26U-yk-hza" firstAttribute="top" secondItem="Yor-eZ-gyy" secondAttribute="top" constant="20" id="Xyx-kJ-rOx"/>
+                            <constraint firstItem="Yor-eZ-gyy" firstAttribute="bottom" secondItem="26U-yk-hza" secondAttribute="bottom" constant="20" id="vAY-NA-9zQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Organizier" id="fFN-8D-Frr">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="47i-vc-8LG"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAN-cG-i0T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="203" y="76"/>
+        </scene>
         <!--Note Categories-->
         <scene sceneID="IHC-UQ-RhZ">
             <objects>
@@ -33,7 +82,7 @@
                             <outlet property="delegate" destination="31R-g7-epQ" id="YUO-gX-r39"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Note Categories" id="viA-Br-O9n">
+                    <navigationItem key="navigationItem" title="Notes" id="viA-Br-O9n">
                         <barButtonItem key="backBarButtonItem" title=" " id="rv7-xZ-F5O"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fb4-9Z-8uX">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,12 +97,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zxs-ex-Edm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="968" y="76"/>
+            <point key="canvasLocation" x="1248" y="468"/>
         </scene>
-        <!--Main-->
+        <!--Weather-->
         <scene sceneID="sPu-qf-8wk">
             <objects>
-                <viewController title="Main" id="df7-T5-B2J" customClass="WeatherViewController" customModule="Organizer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Weather" id="df7-T5-B2J" customClass="WeatherViewController" customModule="Organizer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="578-ne-2Bj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +111,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="u9X-fq-6pK">
-                                <rect key="frame" x="20" y="140" width="374" height="722"/>
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DW3-g6-aJ5">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
@@ -137,22 +186,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5z-Ng-b7T">
-                                        <rect key="frame" x="0.0" y="355.5" width="374" height="256.5"/>
+                                        <rect key="frame" x="0.0" y="355.5" width="374" height="418.5"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ir-qt-0yR">
-                                        <rect key="frame" x="260" y="622" width="114" height="100"/>
-                                        <color key="backgroundColor" red="0.4039215686" green="0.84313725490000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="P5q-Ig-W53"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="To Notes">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="31R-g7-epQ" kind="show" id="zcv-Md-izr"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="DW3-g6-aJ5" firstAttribute="leading" secondItem="u9X-fq-6pK" secondAttribute="leading" id="8Ko-m2-Zby"/>
@@ -173,9 +208,7 @@
                             <constraint firstItem="Wf4-wX-cp3" firstAttribute="trailing" secondItem="Jfh-Pv-xoG" secondAttribute="trailing" id="qwR-mk-4CG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Weather" id="1pJ-f7-Ma0">
-                        <barButtonItem key="backBarButtonItem" title="to Weather" id="7FM-u3-uQw"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="1pJ-f7-Ma0"/>
                     <connections>
                         <outlet property="cityLabel" destination="z64-a1-YEL" id="Mm5-Vg-LIg"/>
                         <outlet property="conditionImageView" destination="SF4-Ca-UNd" id="los-pV-kby"/>
@@ -185,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hd-dC-hoM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="208.69565217391306" y="75.669642857142847"/>
+            <point key="canvasLocation" x="1248" y="-246"/>
         </scene>
         <!--Items-->
         <scene sceneID="j27-G0-8YA">
@@ -233,7 +266,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKl-g4-Fx4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1820" y="76"/>
+            <point key="canvasLocation" x="2096" y="467"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="02c-tG-Iro">
@@ -255,7 +288,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="df7-T5-B2J" kind="relationship" relationship="rootViewController" id="Pzy-OJ-eGd"/>
+                        <segue destination="5vm-n6-t3J" kind="relationship" relationship="rootViewController" id="wcf-ML-QEJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbI-uA-xDr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -276,6 +309,9 @@
         </systemColor>
         <systemColor name="systemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

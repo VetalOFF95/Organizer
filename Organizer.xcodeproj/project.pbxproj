@@ -133,13 +133,29 @@
 		FA57EE1F2573C1AC00D2F9E3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FACA9F5C2573C781009602AD /* Category.swift */,
-				FACA9F5F2573C7A7009602AD /* Item.swift */,
+				FA5B0BE225790C3300BA8E5F /* Notes */,
+				FA5B0BE025790C2600BA8E5F /* Weather */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA5B0BE025790C2600BA8E5F /* Weather */ = {
+			isa = PBXGroup;
+			children = (
 				FA2E6E9F2576DF9800B92007 /* WeatherManager.swift */,
 				FA2E6EA22576DFC600B92007 /* WeatherData.swift */,
 				FA2E6EA52576DFDF00B92007 /* WeatherModel.swift */,
 			);
-			path = Model;
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		FA5B0BE225790C3300BA8E5F /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				FACA9F5C2573C781009602AD /* Category.swift */,
+				FACA9F5F2573C7A7009602AD /* Item.swift */,
+			);
+			path = Notes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

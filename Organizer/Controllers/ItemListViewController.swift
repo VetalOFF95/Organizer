@@ -66,6 +66,8 @@ class ItemListViewController: SwipeTableViewController {
         return cell
     }
     
+    //MARK: - Select items
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if let item = todoItems?[indexPath.row] {

@@ -113,10 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				FA223F422576DAC6001E4FA8 /* MainViewController.swift */,
+				FA2E6EAD2576E0CD00B92007 /* WeatherViewController.swift */,
 				FACA9F6725740881009602AD /* SwipeTableViewController.swift */,
 				FA57EDFC2573BAF100D2F9E3 /* CategoryViewController.swift */,
 				FACA9F6A25740996009602AD /* ItemListViewController.swift */,
-				FA2E6EAD2576E0CD00B92007 /* WeatherViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
